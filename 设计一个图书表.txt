@@ -1,0 +1,6 @@
+ create table book(
+  name varchar(20) comment '书名',
+    author varchar(20) comment '作者',
+  price int comment '价格',
+    type varchar(20) comment '类型'
+   );
