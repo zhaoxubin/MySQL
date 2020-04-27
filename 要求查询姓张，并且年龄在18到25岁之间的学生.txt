@@ -1,0 +1,9 @@
+ create table student(name varchar(20),age int);
+
+ insert into student values
+    ('张杰',18),('李娜',20),('张玉',17),('张天',24),('赵包',25);
+
+ select * from student where name like('张%') and age between 18 and 25;
+
+
+
