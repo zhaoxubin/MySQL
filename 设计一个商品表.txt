@@ -1,0 +1,6 @@
+create table commodities(
+     name varchar(50) comment '商品名称',
+     price int comment '商品价格',
+     inventory int comment '商品库存',
+     desc varchar(60) comment '商品描述'
+);
