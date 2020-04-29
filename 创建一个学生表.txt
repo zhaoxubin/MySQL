@@ -1,0 +1,10 @@
+create table stu_test (  
+      id int,   
+      name varchar(20) comment '姓名',  
+      password varchar(50) comment '密码', 
+      age int,  
+     sex varchar(1),  
+     birthday timestamp,  
+     amout decimal(13,2),   
+     resume text 
+   );
