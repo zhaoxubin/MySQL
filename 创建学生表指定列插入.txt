@@ -1,0 +1,11 @@
+drop table if exists student;  
+create table student (  
+id int,  
+sn int comment '学号',  
+name varchar(20) comment '姓名',   
+qq_mail varchar(20) comment 'QQ邮箱' );
+
+insert into student （id,sn,name）values
+(1,'101','赵三'),
+(2,'102','张白'),
+(3,'103','刘辉');
