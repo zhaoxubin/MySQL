@@ -1,0 +1,27 @@
+//建表
+drop table if exists exam_result;
+create table exam_result(
+    id int,
+    name varchar(20),
+    chinese decimal(3,1),
+    english decimal(3,1),
+    math decimal(3,1)
+);
+//插入数据
+insert into exam_result values
+(1,'赵四',67,89,78),
+(2,'张军',45,67,97),
+(3,'李逵',76,87,76),
+(4,'刘鑫',45,76,68),
+(5,'田奎',58,98,49);
+
+//查询字段为表达式
+select id，name,chinese,10 from exam_result;
+
+select id,name,chinese,english,math+10 from exam_result;
+
+select id,name,chinese+english+math from exam_result;
+
+
+//为查询结果指定别名
+select id,name,chinese+english+math as 总分 from exam_result;
