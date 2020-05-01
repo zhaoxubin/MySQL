@@ -1,0 +1,22 @@
+//建表
+drop table if exists exam_result;
+create table exam_result(
+    id int,
+    name varchar(20),
+    chinese decimal(3,1),
+    english decimal(3,1),
+    math decimal(3,1)
+);
+//插入数据
+insert into exam_result values
+(1,'赵四',67,89,78),
+(2,'张军',45,67,97),
+(3,'李逵',76,87,76),
+(4,'刘鑫',45,76,68),
+(5,'冯哲',45,76,68),
+(6,'田奎',58,98,49);
+//查询同学及总分，由高到低 
+//使用表达式
+select name,chinese+math+english from exam_result order by chinese+english+math desc;
+//使用别名
+select name,chinese+math+english as total from exam_result order by total desc;
