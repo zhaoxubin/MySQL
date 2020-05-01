@@ -1,0 +1,2 @@
+//对多个字段进行排序，排序优先级随书写顺序
+select name,math,chinese,english from exam_result order by math desc,chinese,english;
