@@ -1,0 +1,4 @@
+//查询英语成绩大于八十，并且语文成绩大于七十的同学
+select * from exam_result where english > 80 and chinese > 70;
+//查询英语成绩大于八十，或者语文成绩大于七十的同学
+select * from exam_result where english > 80 or chinese > 70;
