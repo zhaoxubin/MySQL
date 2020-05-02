@@ -1,0 +1,6 @@
+//查询英语不及格的同学及英语成绩 
+select name,english from exam_result where english < 60;
+//查询语文成绩好于英语成绩的同学 
+select name,english,chinese from exam_result where english < chinese;
+//查询总分在 200 分以上的同学 
+select name,english+chinese+math from exam_result where math+chinese+english > 200;
