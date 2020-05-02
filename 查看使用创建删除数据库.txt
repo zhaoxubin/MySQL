@@ -1,0 +1,9 @@
+//查看所有数据库
+show databases;
+//使用某个数据库
+use testdatabase;
+//创建数据库
+create database if not exists da_test1;
+//删除数据库
+drop database da_test1;
+drop database if exists da_test1;
