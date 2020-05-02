@@ -1,0 +1,9 @@
+//% 匹配任意多个（包括 0 个）字符 
+select name from exam_result where name like '刘%';
+ //匹配严格的一个任意字符
+select name from exam_result where name like '刘_';
+
+//查询 qq_mail 已知的同学姓名
+select name,qq_mail from student where qq_mail is not null;
+//查询 qq_mail 未知的同学姓名
+select name,qq_mail from student where qq_mail is  null;
