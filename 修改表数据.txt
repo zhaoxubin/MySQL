@@ -1,0 +1,9 @@
+//修改updata
+//将赵四同学的数学成绩变更为 80 分
+update exam_result set math = 80 where name = '赵四'；
+//将张军同学的数学成绩变更为 60 分，语文成绩变更为 70 分 
+update exam_result set math = 60,chinese = 70 where name = '张军';
+//将总成绩倒数前三的 3 位同学的数学成绩加上 30 分 
+update exam_result set math+30 order by chinese+math+english limit 3;
+//将所有同学的语文成绩更新为原来的 2 倍
+update exam_result set chinese = chinese+30;
