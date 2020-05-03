@@ -1,0 +1,5 @@
+//分页查询
+//显示（0，3]页
+select id,name,chinese,english,math from exam_result order by id limit 3 offset 0;
+//显示(1,5]
+select id,name,chinese,english,math from exam_result order by id limit 4 offset 1;
