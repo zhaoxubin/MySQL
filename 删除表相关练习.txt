@@ -1,0 +1,10 @@
+// 删除张军同学的考试成绩
+delete from exam_result where name = '张军';
+
+//建表
+create table for_delete(id int , name varchar(20));
+insert into for_delete values(1,'三个'),(2,'四个');
+//删除整张表
+drop table if exists for_delete;
+//删除整张表的数据
+delete from for_delete;
