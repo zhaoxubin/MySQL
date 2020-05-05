@@ -1,0 +1,2 @@
+drop table if exists student;
+create table student(id int not null,sn int unique,name varchar(20),qq_mail varchar(20));
