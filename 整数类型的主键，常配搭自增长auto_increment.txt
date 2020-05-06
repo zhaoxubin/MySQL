@@ -1,0 +1,7 @@
+//对于整数类型的主键，常配搭自增长auto_increment来使用。插入数据对应字段不给值时，使用最大 值+1
+drop table if exists student;
+create table student(
+    id int not null primary key auto_increment,
+    sn int unique,
+    name varchar(20) default 'unkown',
+    qq_mail varchar(20)); 
