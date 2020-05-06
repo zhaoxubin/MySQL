@@ -1,0 +1,7 @@
+//指定id列为主键
+drop table if exists student;
+create table student(
+    id int not null primary key,
+    sn int unique,
+    name varchar(20) default 'unkown',
+    qq_mail varchar(20)); 
