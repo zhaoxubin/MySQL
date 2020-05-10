@@ -1,0 +1,20 @@
+//外键约束
+
+//班级表
+ drop table if exists classes;
+ create table classes(
+     id int primary key auto_increment,
+     name varchar(20),
+     `desc` varchar(100)
+ );
+
+//学生表
+drop table if exists student;
+create table student(
+    id int primary key auto_increment,
+    sn int unique,
+    name varchar(20) default 'unkown',
+    qq_mail varchar(20),
+    classes_id int,
+    foreign key (classes_id) references classes(id) //建立外键
+);
