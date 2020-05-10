@@ -1,0 +1,8 @@
+// check 约束
+drop table if exists test_user;
+create table test_user(
+    id int,
+    name varchar(20),
+    sex varchar(10),
+    check(sex = '男' or sex = '女')
+);
