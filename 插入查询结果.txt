@@ -1,0 +1,12 @@
+//插入查询结果
+drop table if exists test_user;
+create table test_user(
+    id int primary key auto_increment,
+    name varchar(20),
+    age int,
+    email varchar(20),
+    sex varchar(20),
+    mobile varchar(20) 
+)
+
+insert into test_user(name,email) select name,qq_mail from student;  
