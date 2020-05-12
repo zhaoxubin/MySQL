@@ -1,0 +1,22 @@
+-- group by
+
+--创建一个测试表，并插入数据
+create table emp(  
+    id int primary key auto_increment,  
+    name varchar(20) not null,  
+    role varchar(20) not null,  
+    salary numeric(11,2) 
+    );
+insert into emp(name, role, salary) values 
+    ('马云','服务员', 1000.20), 
+    ('马化腾','游戏陪玩', 2000.99), 
+    ('孙悟空','游戏角色', 999.11),
+    ('猪无能','游戏角色', 333.5), 
+    ('沙和尚','游戏角色', 700.33), 
+    ('隔壁老王','董事长', 12000.66);
+
+--查询每个角色的最高工资、最低工资和平均工资
+select role,max(salary),min(salary),avg(salary) from emp group by role;
+
+--显示平均工资低于1500的角色和它的平均工资
+select role,avg(salary) from emp group by role having avg(salary) <1500;
