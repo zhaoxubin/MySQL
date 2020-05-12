@@ -1,0 +1,22 @@
+//聚合查询
+
+--查询班级一共多少人
+select count(*) from student;
+select count(0) from student;
+--统计班级收集的 qq_mail 有多少个，qq_mail 为 NULL 的数据不会计入结果 
+select count(qq_mail) from student;
+
+--统计数学成绩总分
+select sum(math) from exam_result;
+
+-- 不及格 < 60 的总分，没有结果，返回 NULL
+select sum(math) from exam_result where math < 60;
+
+-- 求平均分
+select avg(math + chinese + english) 平均总分成绩 from exam_result;
+
+--求英语最高分
+select max(english) from exam_result;
+
+--返回 > 70 分以上的数学最低分
+select min(math) from exam_result where math > 70;
