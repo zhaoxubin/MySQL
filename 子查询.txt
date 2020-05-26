@@ -1,0 +1,24 @@
+
+--子查询
+
+--单行子查询
+--查询与“不想毕业”为同学的同班同学：
+select name from student 
+where student.classes_id =(
+    select classes_id from student where name = '不想毕业'
+);
+
+--多行子查询
+--查询“语文”或“英文”课程的成绩信息
+select score from score 
+where course_id in (
+    select id from course 
+    where name = '语文' or name = '英文'
+);
+
+select * from score
+where exists(
+  select score.course_id from course where(
+      name = '语文' or name = '英文'
+  ) and score.course_id = course.id
+);
